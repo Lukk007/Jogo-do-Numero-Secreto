@@ -2,7 +2,6 @@ let listaDeNumerosSorteados = [];
 numeroMaximo = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1 ;
-console.log(numeroSecreto);
 
 function exibirTextoNaTela(tag, texto) {
     let armazem = document.querySelector(tag);
@@ -37,7 +36,6 @@ function novoJogo() {
     exibirTextoNaTela("h1", "Jogo do número secreto");
     exibirTextoNaTela("p", "Tente acertar o número secreto entre 1 e 100");
     document.getElementById("reiniciar").setAttribute("disabled", true);
-    console.log(numeroSecreto);
 };
 
 function gerarNumeroAleatorio() {
@@ -50,7 +48,6 @@ function gerarNumeroAleatorio() {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEsolhido);
-        console.log(listaDeNumerosSorteados);
         return numeroEsolhido;
     }
 };
